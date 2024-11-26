@@ -1,29 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;700;900&family=Urbanist:wght@300;600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*font-family: 'Lexend Deca', sans-serif;*/
     font-family: 'Urbanist', sans-serif;
 }
 
-
-/*// thapa technical SUBSCRIBE*/
-
-html{
+/* Base Styles */
+html {
     font-size: 62.5%;
+    background-color: #1E1E2F;
+    color: #F3F4F6;
 }
 
-
-a{
+a {
     text-decoration: none;
 }
 
-li{
+li {
     list-style: none;
 }
-
 
 main {
     display: flex;
@@ -33,112 +30,206 @@ main {
     margin-top: 10rem;
 }
 
-main h2{
+main h2 {
     font-size: 3rem;
     font-family: 'Lexend Deca', sans-serif;
     margin-bottom: 4.8rem;
-}
-
-main h2 .icons{
     color: #68B984;
+    text-align: center;
 }
 
-/*===================*/
-/*navbar styling */
-/*====================*/
+main h2 .icons {
+    color: #F9A826;
+}
 
-nav{
-    width:55rem ;
+/* Navbar Styling */
+nav {
+    width: 100%;
+    max-width: 55rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: .1rem solid #ccc;
+    border-bottom: 0.1rem solid #333;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
 }
 
-nav a{
+nav a {
     font-size: 2rem;
     font-family: 'Lexend Deca', sans-serif;
-    color: #ccc;
-    border-bottom: .3rem solid transparent;
+    color: #A3A3A3;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s ease;
 }
 
-nav a:hover{
-    border-color: #3A3845;
+nav a:hover {
+    border-color: #68B984;
+    color: #F3F4F6;
 }
 
 nav a.active {
-    color: #000;
-    border-color: #68B984;
+    color: #68B984;
+    border-color: #F9A826;
 }
 
-/*===================*/
-/*Form  styling */
-/*====================*/
+/* Form Styling */
+form {
+    width: 100%;
+    max-width: 50rem;
+    display: flex;
+    align-items: center; /* Ensure items align in a single row */
+    padding: 0 2rem;
+    gap: 1rem; /* Add some spacing between input and button */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
-form input{
-    border: .1rem solid #ccc;
-    border-radius: .3rem;
-    width: 45rem;
-    margin: 4rem 0;
-    user-focus: none;
-    padding: .6rem 1rem;
+form input {
+    border: 0.1rem solid #333;
+    border-radius: 0.5rem;
+    background-color: #2C2C3A;
+    color: #F3F4F6;
+    flex: 1; /* Take up available space */
+    padding: 1rem;
     font-size: 1.6rem;
-    letter-spacing: .06rem;
+    letter-spacing: 0.06rem;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-form button{
-    padding: .8rem 2.8rem;
+form input:focus {
+    border-color: #68B984;
+    outline: none;
+}
+
+form button {
+    padding: 0.6rem 1.8rem; /* Slightly reduce padding */
+    font-size: 1.4rem; /* Decrease font size */
     border: none;
-    border-radius: .3rem;
+    border-radius: 0.5rem;
     font-weight: bold;
     cursor: pointer;
-    margin-left: 2.4rem;
-     background-color: #68B984;
-     color: #fff;
+    background-color: #68B984;
+    color: #1E1E2F;
+    transition: background-color 0.3s ease;
 }
 
-label{
+form button:hover {
+    background-color: #56A270;
+}
+
+
+label {
     font-size: 1.5rem;
-    letter-spacing: .06rem;
-    color: #3A3845;
+    letter-spacing: 0.06rem;
+    color: #F9A826;
     font-weight: bold;
 }
 
-/*===================*/
-/*todo task list */
-/*====================*/
+/* Todo Task List */
+.main-task {
+    width: 100%;
+    max-width: 50rem;
+    padding: 0 2rem;
+}
 
-.main-task li{
+.main-task li {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr auto;
     align-items: center;
-    width:50rem;
+    width: 100%;
     min-height: 6rem;
-    border-bottom: .1rem solid #ccc;
+    border-bottom: 0.1rem solid #333;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-.main-task li:first-child{
-    border-top: .1rem solid #ccc;
+.main-task li:first-child {
+    border-top: 0.1rem solid #333;
 }
 
-.main-task li:hover{
-    background-color: #fef2f2;
+.main-task li:hover {
+    background-color: #2C2C3A;
 }
 
-.main-task li input[type="checkbox"]:checked  + label {
+.main-task li input[type="checkbox"]:checked + label {
     text-decoration: line-through;
     color: #D14D72;
 }
 
-.main-task li button{
-    padding: .6rem 1rem;
-    width: 7rem;
+.main-task li button {
+    padding: 0.6rem 1rem;
     background-color: #D14D72;
     color: #FFF9F9;
-    border:none;
+    border: none;
     display: inline-block;
     cursor: pointer;
     justify-self: center;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease;
+}
+
+.main-task li button:hover {
+    background-color: #B13A5E;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    nav a {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    form input {
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .main-task li {
+        grid-template-columns: 1fr auto;
+        grid-gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+    }
+
+    main h2 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    form input {
+        margin: 1.5rem 0;
+    }
+
+    .main-task li {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+
+    .main-task li button {
+        justify-self: flex-end;
+    }
 }
